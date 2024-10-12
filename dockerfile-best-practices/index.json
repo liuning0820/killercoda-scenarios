@@ -9,6 +9,11 @@
       },
       "steps": [
         {
+            "title": "Cached layers",
+            "text": "step1/text.md",
+            "verify": "step1/verify.sh"
+        },
+        {
           "title": "Multi-stage build",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"

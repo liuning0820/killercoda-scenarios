@@ -62,5 +62,6 @@ Build the image:
 docker build -t server-2 .
 ```{{exec}}
 
+Once the image build successful, click 'CHECK' to verify your answer.
 
 </details>

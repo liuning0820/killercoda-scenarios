@@ -35,16 +35,15 @@ It seems like a very small gain in time here, but it can be important when build
 
 <br>
 
-Modify `/root/app/Dockerfile` (remove `# cached` comments first):
+Modify `/root/app/Dockerfile`:
 
 <br>
 
 ```plain
-# syntax=docker/dockerfile:1
-FROM golang:1.21-alpine # cached
-WORKDIR /src # cached
-COPY go.mod go.sum /src/ # cached
-RUN go mod download # cached
+FROM golang:1.21-alpine 
+WORKDIR /src 
+COPY go.mod go.sum /src/ 
+RUN go mod download 
 COPY . .
 RUN go build -o /bin/client ./cmd/client
 RUN go build -o /bin/server ./cmd/server
